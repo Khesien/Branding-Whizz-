@@ -207,25 +207,53 @@
     <header class="navbar" id="navbar">
         <div class="container">
             <div class="logo">
-                <a href="index.html">BRANDING <span>WHIZZ</span></a>
+                <a href="index.html"><img src="logo.png" alt="Branding Whizz Logo" class="brand-logo"></a>
             </div>
-            
-            <!-- 
-                Navigation links mapping back to specific anchor IDs on the main index.html page.
-                This allows the user to navigate the one-page layout directly from this sub-page.
-            -->
             <nav class="nav-links">
-                <a href="index.html#home">Home</a>
-                <a href="index.html#about">About</a>
-                <a href="index.html#values">Core Values</a>
-                <a href="index.html#ecosystem">Our Ecosystem</a>
-                <a href="index.html#wosei">Wosei Trust</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <div class="nav-link-wrapper">
+                    <a href="who-we-are.html">Who We Are <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="who-we-are.html#mandate">Our Mandate</a></li>
+                        <li><a href="who-we-are.html#vision">Vision, Mission & Values</a></li>
+                        <li><a href="who-we-are.html#leadership">Leadership Team</a></li>
+                    </ul>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="services.html">Services <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ecosystem.html#ecosystem">Creative Design (Khudu)</a></li>
+                        <li><a href="ecosystem.html#ecosystem">Marketing (Lengau)</a></li>
+                        <li><a href="ecosystem.html#ecosystem">Printing (Phuti)</a></li>
+                        <li><a href="ecosystem.html#ecosystem">Digital Media (Tshephe)</a></li>
+                        <li><a href="ecosystem.html#ecosystem">Communications (Noko)</a></li>
+                    </ul>
+                </div>
+                <a href="projects.html">Projects</a>
+                <div class="nav-link-wrapper">
+                    <a href="opportunities.html">Opportunities <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="opportunities.html#careers">Careers</a></li>
+                        <li><a href="opportunities.html#tenders">Tender Notices</a></li>
+                        <li><a href="opportunities.html#suppliers">Supplier Registration</a></li>
+                    </ul>
+                </div>
+                <a href="contact.html">Contact</a>
+                <a href="ecosystem.html">Ecosystem</a>
             </nav>
-            
             <div class="nav-actions">
-                <a href="index.html#contact" class="btn btn-primary">Let's Talk</a>
-                
-                <!-- Burger menu icon specifically for mobile screen navigation toggles -->
+                <div class="search-wrapper">
+                    <button class="search-toggle" id="search-toggle">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="search-bar" id="search-bar">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                        <div id="search-results" class="search-results"></div>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Let's Talk</a>
                 <button class="burger-menu" id="burger-menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
