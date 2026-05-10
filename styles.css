@@ -401,6 +401,129 @@ section {
     color: var(--secondary-green);
 }
 
+.badge-gold {
+    background-color: rgba(253, 185, 19, 0.15);
+    color: #b8860b;
+}
+
+/* EXCO / Big Five Section */
+.exco-section {
+    background-color: var(--bg-light);
+    padding: 100px 0;
+}
+
+.exco-intro {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* TRIANGULAR PYRAMID HIERARCHY */
+.tri-pyramid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.tri-layer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3px;
+    padding: 15px 30px;
+    color: white;
+    min-height: 140px; /* Force minimum height for straight diagonals */
+}
+
+/* Widths and Clip Paths for perfect straight edges */
+.tri-1 { 
+    width: 320px; 
+    background: #002855; 
+    clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+}
+.tri-2 { 
+    width: 495px; 
+    background: #003f88; 
+    clip-path: polygon(17.67% 0, 82.33% 0, 100% 100%, 0 100%);
+}
+.tri-3 { 
+    width: 670px; 
+    background: #00509d; 
+    clip-path: polygon(13.05% 0, 86.95% 0, 100% 100%, 0 100%);
+}
+.tri-4 { 
+    width: 845px; 
+    background: #0061a8; 
+    clip-path: polygon(10.35% 0, 89.65% 0, 100% 100%, 0 100%);
+}
+.tri-5 { 
+    width: 1020px; 
+    background: var(--primary-blue); 
+    clip-path: polygon(8.57% 0, 91.43% 0, 100% 100%, 0 100%);
+}
+
+.tri-layer h3 {
+    font-size: 1.15rem;
+    color: white;
+    margin: 5px 0;
+    font-weight: 700;
+}
+
+.tri-layer p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.4;
+    margin: 0;
+    max-width: 80%;
+}
+
+.tri-subroles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.9);
+}
+.tri-subroles span {
+    background: rgba(0,0,0,0.15);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Responsive constraints */
+@media (max-width: 1050px) {
+    .tri-pyramid-container {
+        transform: scale(0.85);
+        transform-origin: top center;
+    }
+}
+@media (max-width: 800px) {
+    .tri-pyramid-container {
+        transform: scale(0.65);
+    }
+}
+@media (max-width: 600px) {
+    .tri-pyramid-container { transform: none; }
+    .tri-layer { 
+        width: 100% !important; 
+        clip-path: none !important; 
+        min-height: auto;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    .tri-layer p { max-width: 100%; }
+}
+
 /* Hero */
 .hero {
     position: relative;
@@ -754,13 +877,48 @@ section {
     margin-bottom: 5px;
 }
 
+.dept-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
 .dept-role {
     color: var(--secondary-green);
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 15px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    background-color: rgba(140, 198, 63, 0.1);
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.dept-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.dept-functions {
+    background-color: var(--bg-light);
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+    border-left: 3px solid var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.dept-functions strong {
+    color: var(--primary-blue);
+    display: block;
+    margin-bottom: 5px;
 }
 
 .icon-header {
